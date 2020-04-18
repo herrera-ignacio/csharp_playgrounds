@@ -8,11 +8,15 @@ namespace GradeBook
         static void Main(string[] args)
         {
             var book = new Book("Test Grade Book");
-            Book.AddGrade(89.1);
-            Book.AddGrade(90.5);
-            Book.AddGrade(77.5);
-            book.ShowStatistics();
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.AddGrade(77.5);
+            var stats = book.GetStatistics();
           
+            Console.WriteLine($"Lowest grade is {stats.Low}");
+            Console.WriteLine($"Highest grade is {stats.High}");
+            Console.WriteLine($"Average grade is {stats.Average}");
+            
             if (args.Length > 0)
             {
                 Console.WriteLine($"Nacho says Hello to you {args[0]}!");

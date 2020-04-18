@@ -15,10 +15,12 @@ Check your installation was succesfull with `dotnet --info`.
 * .NET or .NET Framework (Windows Only)
 * .NET Core (Linux, Mac, Windows, ARM) - Open Source
 
-## Our First Project
+## Basic Commands
 
-Check `./gradebook` folder.
+Check `./gradebook` folder for our first demo project.
 
 You can create your first "Hello World" application running `dotnet new console` and start it with `dotnet run`. This will handle for you `dotnet restore` and `dotnet build`.
 
 You can pass console parameters as strings like this: `dotnet run -- <param>`.
+
+You can create a reference wihin two projects, for example, go to `gradebook/test/GradeBook.Tests` project, and run `dotnet add reference ../../src/GradeBook/GradeBook.csproj`. Now you can build the project and run `dotnet test`.
